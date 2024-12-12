@@ -19,10 +19,11 @@ https://connectrpc.com/docs/go/getting-started
 
 - `docker compose up`
 
-## テストスクリプト
+## テスト用スクリプト
 
 ```sh
 curl -H "Content-Type: application/json" \
 -d '{"name": "Jane"}' \
+-w '\n' -D - \
 http://localhost:8080/greet.v1.GreetService/Greet
 ```
